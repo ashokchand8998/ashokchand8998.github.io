@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+  body{
+  background-color: black;
+  color:lightgrey;
+  font-family: Calibri;
+  line-height: 1.5;
+}
+header{
+  color:white;
+  font-size:32px;
+}
+#navbar{
+  background-color:#000099;
+  position:fixed;
+  top:0px;
+  left:0px;
+  height:100%;
+  width:345px;
+  max-width:50%;
+  border-right:solid yellow;
+}
+#navbar header{
+  font-size:35px;
+  padding:10px 0 10px 0;
+  text-align:center;
+}
+#navbar ul{
+  height:90%;
+  padding: 0px;
+  overflow:auto;
+}
+#navbar li{
+  border-top: 1px solid yellow;
+  list-style: none;
+  width: 100%;
+}
+#navbar a{
+  display: block;
+  text-decoration: none;
+  color: lightgrey;
+  font-size:20px;
+  padding:10px 30px;
+}
+#main-doc{
+  margin-left:355px;
+  padding:20px;
+}
+.main-section{
+  font-size: 18px;
+}
+.main-section a{
+  color: skyblue;
+  text-decoration:none;
+}
+code{
+  display:block;
+  overflow:auto;
+  padding-bottom:15px;
+  white-space:pre;
+  background-color: #222;
+  color:lightgreen;
+  font-size:15px;
+  border-radius:10px;
+  margin:20px;
+}
+@media (max-width: 700px){
+  #navbar{
+    position:static;
+    width:100%;
+    max-width:100%;
+    border-right:none;
+    border-bottom:solid yellow;
+  }
+  #main-doc{
+    margin:0px;
+  }
+}
+  </style>
+  <title>Technical Documentation</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Project Documentation</header>
+      <ul>
+        <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+        <li><a href="#System_Planning" class="nav-link">System Planning</a></li>
+        <li><a href="#System_Design" class="nav-link">System Design</a></li>
+        <li><a href="#Implementation" class="nav-link">Implementation</a></li>
+        <li><a href="#Conclusions" class="nav-link">Conclusions</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>
+          Our project is an E-Learning website for online immersive learning experience on a computer or mobile device that is perfect for stimulating a student and encouraging learning.
+Admin will be able to manage contents, working system and data of the server/website.
+          </p>
+        <p>
+          In this website users can view and download various contents available in the web pages. They can also share any desired content. This system is implemented using html5, CSS, JavaScript, ASP.NET, C#. For database SQL server has been used.
+        </p>
+      </section>
+      <section class="main-section" id="System_Planning">
+        <header>System Planning</header>
+        <h3>Survey of Technologies</h3>
+        <h4>ASP.NET with C#:</h4>
+        <p>
+          ASP.NET is a set of Web development tools offered by Microsoft. Programs like Visual Studio .NET and Visual Web Developer allow Web developers to create dynamic websites using a visual interface. ASP.NET also supports Visual Basic.NET, JScript .NET and open-source languages like Python and Perl.
+        </p>
+        <p>
+          ASP.NET is built on the .NET framework, which provides an application program interface (API) for software programmers. The .NET development tools can be used to create applications for both the Windows operating system and the Web. Programs like Visual Studio .NET provide a visual interface for developers to create their applications, which makes .NET a reasonable choice for designing Web-based interfaces as well.
+        </p>
+        <p>
+          C# (pronounced "C Sharp") is a programming language developed by Microsoft. It was introduced in 2002 with version 1.0 of Microsoft's .NET Framework. Since then, C# has gone through several revisions, corresponding with each .NET update. Today, it is one of the most popular programming languages for creating Windows programs and web applications.
+C# is a derivative of the C programming language and is similar to C++. It uses the same basic operators as C++, is object oriented, case sensitive, and has nearly identical syntax. 
+        </p>
+        <h4>SQL Server:</h4>
+        <p>
+          SQL Server is Microsoft's relational database management system (RDBMS). It is a full-featured database primarily designed to compete against competitors Oracle Database (DB) and MySQL. Like all major RBDMS, SQL Server supports ANSI SQL, the standard SQL language. However, SQL Server also contains T-SQL, its own SQL implementation. SQL Server Management Studio (SSMS) (previously known as Enterprise Manager) is SQL Server's main interface tool, and it supports 32-bit and 64-bit environments. SQL Server is sometimes referred to as MSSQL and Microsoft SQL Server.
+        </p>
+        <h3>Stakeholders</h3>
+        <p>
+          A stakeholder is any person or entity that has an interest in the success or failure of a business or project. Stakeholders can have a significant impact on decisions regarding the operations and finances of an organization. Examples of stakeholders are creditors, employees, and even the local community. Here is more information about the various categories of stakeholder:</p>
+        <ul>
+            <li>Students</li>
+            <li>Teachers</li>
+            <li>Educational institutes</li>
+        </ul>
+        <p>
+        In short, stakeholders can comprise a substantially larger pool of entities than the more traditional group of shareholders who actually own a business.
+        </p>
+      </section>
+      <section class="main-section" id="System_Design">
+        <header>System Design</header>
+        <h3>Basic Modules:</h3>
+        <p>The system comprises of 2 major modules with their sub-modules as follows:</p>
+        <ol>
+          <li>
+            <h4>User / Student</h4>
+            <ul>
+              <li>Login: User can login his account using id and password.</li>
+              <li>Main Menu: User will have access of main menu.</li>
+              <li>Upload: User can submit for consideration of upload any document.</li>
+              <li>Knowledge: User read the uploaded knowledge articles, study materials.</li>
+            </ul>
+          </li>
+          <li>
+            <h4>Admin</h4>
+            <ul>
+              <li>Login: Admin can login using credentials.</li>
+              <li>Manage User: Admin can manage users.</li>
+              <li>Editing: Admin can add, update, access and delete contents.</li>
+            </ul>
+          </li>
+        </ol>
+        <h3>Security issue</h3>
+        <p>
+          E-learning security plays a very important role in e-learning systems development despite its huge benefits. There are numerous challenges faced by learners, Higher learning Institutions and e-learning service providers in today’s internet age. Some of these challenges include:
+        </p>
+        <ul>
+          <li>
+            <b>
+              Interoperability of applications:
+            </b>
+          </br>
+        <p>
+          Despite current technological advances in e-learning, emerging trends are demanding a greater level of interoperability for components, systems, applications, and environments which are often developed for a particular institutions or organization and provide very similar functionalities (Cardenas and Sanchez, 2005).
+        </p>
+        </li>
+      <li>
+        <b>
+          Standardization and compatibility:
+        </b>
+      </br>
+    <p>
+          These are vital for both e-learning service providers and end users (learners) to be able to inter-change components in the market. These are very important where different e-learning systems must interact with one another. 
+    </p>
+    </li>
+  <li><b>Security policy and enforcement Mechanism:</b></br>
+        <p>
+          The security policy is defined as the set of laws, rules and practices that regulate how an organization manages, protects and distributes sensitive information. Once the security policy is defined, it must be captured and followed at application runtime via enforcement mechanism which represents the set of centralized and distribute software to ensure that the security policy is maintained and never violated. 
+        </p>
+        </li>
+<li><b>Standardization and compatibility:</b></br>
+        <p>
+          These are vital for both e-learning service providers and end users (learners) to be able to inter-change components in the market. These are very important where different e-learning systems must interact with one another. 
+        </p>
+        </li><li><b>E-learning Infrastructure:</b></br>
+        <p>
+          This refers to Hardware, Software and connectivity required for e-learning development and implementation (Taurus et al., 2015). 
+        </p>
+        </li>
+        </ul>
+      </section>
+      <section class="main-section" id="Implementation">
+        <header>Implementation</header>
+        <h3>Coding Details and Code Efficiency</h3>
+        <p>Sample Code:</p>
+        <h4>Curriculum.aspx.cs</h4>
+        <pre>
+        <code>
+        using System;
+        using System.Collections.Generic;
+        using System.Linq;
+        using System.Web;
+        using System.Web.UI;
+        using System.Web.UI.HtmlControls;
+        using System.Web.UI.WebControls;
+        using System.Data;
+        using System.Data.SqlClient;
+        using System.Configuration;
+        </code>
+        <code>
+        namespace WebApplication1.Properties
+          {
+         public partial class Curriculum : System.Web.UI.Page
+            {
+              protected void Page_Load(object sender, EventArgs e)
+                {
+               //Code for changing class of selected page to "current" (To change color of the current page label in menu)
+               HtmlGenericControl li = (HtmlGenericControl)this.Master.FindControl("curriculum");
+               li.Attributes.Add("class", "current");
+                if (!IsPostBack)
+              </code>
+              <code>
+                    {
+                    if (Session["user"] != null)
+                     {
+                     string qs = Request.QueryString["sem"];
+                     if (qs != null){
+                     default_div.Visible = false;
+                     Heading.Text = qs;
+                     }
+                     else
+                    {
+                     sem_page.Visible = false;
+                     }
+                   }
+                </code>
+                <code>
+                   else
+                    {
+                   ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Please Login first to access our complete site.');window.location ='Login.aspx';", true);
+                   }
+                 }
+               }
+             }
+           }
+        </code>
+        </pre>
+        <h4>Login.aspx</h4>
+        <pre>
+        <code>
+          using System;
+          using System.Collections.Generic;
+          using System.Linq;
+          using System.Web;
+          using System.Web.UI;
+          using System.Web.UI.HtmlControls;
+          using System.Web.UI.WebControls;
+          using System.Data;
+          using System.Configuration;
+          using System.Data.SqlClient;
+        </code>
+        <code>
+          namespace WebApplication1
+          {
+           public partial class WebForm2 : System.Web.UI.Page
+           {
+           static String prevPage = "";
+             protected void Page_Load(object sender, EventArgs e)
+             {
+             uname.Focus();
+             //Code for changing class of selected page to "current" (To change color of the current
+            page label in menu)
+             HtmlGenericControl li = (HtmlGenericControl)this.Master.FindControl("login");
+             li.Attributes.Add("class", "current");
+             //Storing previous page url to get redirected to it after successfull login.
+               if (!IsPostBack && Request.UrlReferrer != null)
+               {
+                  prevPage = Request.UrlReferrer.ToString();
+               }
+             }
+             protected void Button1_Click(object sender, EventArgs e)
+             {
+             //Creating connection and verifying details
+             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
+             SqlConnection con = new SqlConnection(cs);
+             if (Session["user"] != null)
+             {
+                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('An account is already logged in. Please first signout/logout from that account.');window.location='Profile.aspx';", true);
+             }
+               else
+               {
+                 try
+                 {
+                 con.Open();
+                 SqlCommand cmd = new SqlCommand("SELECT
+                First_name,Last_name,privilege,passwords FROM Users WHERE user_name =@username", con);
+                 cmd.Parameters.AddWithValue("@username", uname.Text);
+                 SqlDataReader dr = cmd.ExecuteReader();
+                 //Checking for valid entries and storing details in session.
+                 if (dr.HasRows)
+                 {
+                 String name = "";
+                 String privilege = "";
+                 String passwd = "";
+                 while (dr.Read())
+                 {
+                     name = dr.GetString(0) + " " + dr.GetString(1);
+                     privilege = dr.GetString(2);
+                     passwd = dr.GetString(3);
+                 }
+                 if (Helper.VerifyHash(password.Text, "SHA512", passwd))
+                 {
+                     Session["user"] = uname.Text;
+                     Session["privilege"] = privilege.Trim();
+                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Login sucessfull! Welcome " + name + "');window.location ='" + prevPage + "';",true);
+                     Label1.Visible = false;
+                 }
+                 else
+                 {
+                     Label1.Visible = true;
+                     uname.Focus();
+                 }
+                 }
+                 else
+                 {
+                     Label1.Visible = true;
+                     uname.Focus();
+                 }
+                 }
+                 catch (SqlException ex_msg)
+                 {
+                     ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage","alert('" + ex_msg.Message + "');", true);
+                     uname.Focus();
+                 }
+                 finally
+                 {
+                     con.Close();
+                 }
+               }
+             }
+           }
+          }
+
+        </code>
+        </pre>
+      </section>
+      <section class="main-section" id="Conclusions">
+        <header>Conclusions</header>        
+        <h3>Conclusion and Future Scopes</h3>
+        <h4>Conclusion</h4>
+        <p>
+          E-learning is not just a change of technology. It is part of a redefinition of how we as a species transmit knowledge, skills, and values to younger generations of workers and students. Users will have access to multiple knowledge modules. Some will be Web pages with simple text and graphics. Others may include multimedia simulations. In many fields, elearning has become the default way to conduct training or to provide education. There are four secrets of e-learning. The first secret is to teach what learners need to learn in the way they most naturally learn. The second secret is to define clear learning objectives. The third secret builds on the first two. It is to focus on the right objectives. The final secret is in the power of testing e-Learning.
+        </p>
+        <h4>Future Scope:</h4>
+        <p>There is always a room for improvements in any software package, however good and efficient it may be done. but the most important thing should be flexible to accept further modification. There are lots of scope to improve the performance of the eLearning System in the area of:
+        </p>
+        <ul>
+          <li>UI</li>
+          <li>Database performance</li>
+          <li>query processing time, etc.</li>
+        </ul>
+        <h3>Limitation of the System</h3>
+        <ul>
+          <li>No self-discipline.</li>
+          <li>No face-to-face interaction.</li>
+          <li>System doesn’t keep user’s track for future help.</li>
+        </ul>
+        <h3>References</h3>
+        <ol>
+          <li><a href="https://www.quora.com/" target="_blank">https://www.quora.com/</a></li>
+          <li><a href="https://www.draw.io" target="_blank">https://www.draw.io</a></li>
+          <li><a href="https://www.youtube.com/" target="_blank">https://www.youtube.com/</a></li>
+          <li><a href="https://www.dotnetcurry.com/" target="_blank">https://www.dotnetcurry.com/</a></li>
+          <li><a href="https://docs.microsoft.com/" target="_blank">https://docs.microsoft.com/</a></li>
+          <li><a href="https://stackoverflow.com" target="_blank">https://stackoverflow.com/</a></li>
+          <li><a href="https://www.google.co.in/" target="_blank">https://www.google.co.in/</a></li>
+          <li><a href="https://parallelcodes.com/" target="_blank">https://parallelcodes.com/</a></li>
+          <li><a href="https://www.w3schools.com/" target="_blank">https://www.w3schools.com/</a></li>
+          <li><a href="https://www.c-sharpcorner.com/" target="_blank">https://www.c-sharpcorner.com/</a></li>
+        </ol>
+       </section>
+    </main>
+  </body>
+</html>

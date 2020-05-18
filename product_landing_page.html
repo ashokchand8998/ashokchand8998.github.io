@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <style>
+  body{
+  background-color:blue;
+}
+header{
+  background-color:green;
+  position:fixed;
+  top:0;
+  left:0;
+  height:70px;
+  width:100%;
+  display:flex;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  font-size:40px;
+  width:800px;
+}
+#header-img{
+  max-height:120px;
+  width:auto;
+}
+#nav-bar{
+  min-width:50%;
+  width:635px;
+}
+nav > ul{
+  display:flex;
+  justify-content:space-around;
+  padding: 0 50px;
+}
+nav > ul > li{
+  list-style:none;
+  padding:5px;
+  font-size:20px;
+  font-weight:bold;
+}
+a{
+  text-decoration:none;
+  color:white;
+}
+
+#middle{
+  margin:150px 0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+#intro{
+  text-align:center;
+  font-size:25px;
+}
+#video{
+  border:3px solid yellow;
+  border-radius:10px;
+  max-width:100%;
+  min-height:auto;
+}
+.container{
+  margin:20px;
+}
+input{
+  margin:10px;
+  border-radius:5px;
+  font-weight:bold;
+}
+#email{
+  font-size:18px;
+  padding:2px;
+  max-width:100%
+}
+#submit{
+  font-size:16px;
+}
+footer{
+  background-color:red;
+  text-align:center;
+  padding:20px;
+  border-radius:10px 10px 0 0;
+  font-size:18px;
+}
+@media (max-width:809px){
+  header{
+    flex-wrap:wrap;
+    max-width:auto;
+    height:auto;
+    padding:0;
+  }
+  ul{
+    margin:0;
+    text-align:center;
+    padding: 0 50px;
+  }
+  li > a{
+    font-size:20px;
+  }
+  .logo{
+    max-width:100%;
+    font-size:30px;
+  }
+  #header-img{
+    max-height:80px;
+    width:auto;
+  }
+}
+  </style>
+  <title>Product Landing Page</title>
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">
+        <img id="header-img" src="https://cdn0.iconfinder.com/data/icons/famous-characters-add-on-vol-2-glyph/48/Sed-31-512.png">
+        <label><b>The Jedi's Store</b></label>
+      </div>
+      <nav id="nav-bar">
+        <ul>
+          <li>
+            <a href="#footer" class="nav-link">Contact</a>
+          </li>
+          <li>
+            <a href="#video" class="nav-link">View</a>
+          </li>
+          <li>
+            <a href="#form" class="nav-link">Subscribe</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="middle">
+      <div id="intro" class="container">
+        <p>
+          <strong>
+            Hello there!!</br>
+        </strong>
+          We provide many different jedi arts and weapons.</br>
+          Please view provided sample video and subscribe to our newsletter.
+          
+        </p>
+      </div>
+      <div class="container">
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/2PclEd4NNN0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+      </div>
+      <div id="inputs" class="container">
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <input type="email" name="email" id="email" placeholder="Enter your email" required>
+          <input type="submit" id="submit" value="Subscribe">
+        </form>
+      </div>
+    </div>
+    <footer id="footer">
+      <b>
+        <i>
+          Follow me: <a href="https://codepen.io/_ashok_">_ashok_</a>
+          </i>
+        </b>
+    </footer>
+  </body>
+</html>
