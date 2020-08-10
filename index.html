@@ -2,6 +2,170 @@
 <html>
   <head>
     <script src="https://use.fontawesome.com/4854591884.js"></script>
+    <script type="text/css">
+      html {
+        scroll-behavior: smooth;
+      }
+      body{
+        line-height: 1.4;
+        font-family: sans-serif;
+        margin: 0;
+      }
+      a{
+        text-decoration: none;
+      }
+      #navbar{
+        display: flex;
+        justify-content: flex-end;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: blue;
+        border-bottom: 1.5px solid black;
+      }
+      #navbar > ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+      }
+      #navbar a{
+        height: 100%;
+        padding: 20px;
+        font-size: 25px;
+        color: white;
+      }
+      .nav-list a:hover{
+        background-color: orange;
+      }
+      #welcome-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin-top: 76px;
+        text-align: center;
+        height: 100vh;
+      }
+      #welcome-section h1{
+        font-size: 60px;
+        color: orange;
+        padding: 10px;
+        margin: 0;
+      }
+      #welcome-section p{
+        margin: 0;
+        font-size: 30px;
+        font-style: italic;
+        color: blue;
+        padding: 5px;
+      }
+
+      #projects{
+        background: grey;
+        padding: 5px;
+        text-align: center;  
+        padding: 30px;
+      }
+      #projects h2{
+        font-size: 40px;
+        text-decoration: underline;
+        color: white;
+      }
+      #project-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        grid-gap: 40px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px 0;
+      }
+      #project-list a{
+        text-decoration: none;
+        background-color: orange;
+        border-radius: 5px;
+      }
+      #project-list p{
+        color: white;
+        font-weight:bold;
+        font-size: 18px;
+      }
+      #project-list img{
+        width: 100%;
+      }
+      #connect{
+        text-align: center;
+        padding: 140px;
+      }
+      .connect-header h2{
+        font-size: 40px;
+        font-weight: 1000;
+        color: orange;
+      }
+      .connect-links{
+        display: flex;
+        justify-content: center;
+      }
+      .connect-links a{
+        margin: 0 20px;
+        color: blue;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      footer{
+        text-align: center;
+        background: blue;
+        padding: 5px;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-around;
+        color: white;
+        margin-top: 40px;
+      }
+      footer a{
+        color: white;
+      }
+
+      @media (max-width: 620px){
+        #navbar{
+          justify-content: center;
+        }
+        #navbar a{
+          font-size: 20px;
+        }
+        #project-list{
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+          grid-gap: 40px;
+          width: 100%;
+          margin: 0 auto;
+          padding: 20px 0;
+        }
+        .connect-links{
+          flex-direction: column;
+        }
+        #connect{
+          margin:0;
+          padding:0;
+        }
+        .connect-header h2{
+          font-size: 30px;
+          font-weight:0;
+        }
+        .connect-links a{
+          margin: 10px 20px;
+          color: blue;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        footer{
+          flex-direction: column;
+          font-size:16px;
+        }
+      }
+    </script>
     <title>Personal Portfolio</title>
   </head>
   
