@@ -1,0 +1,232 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script>
+      class App extends React.Component {
+      constructor (props) {
+        super(props)
+        this.state = {
+          changingColor : "white",
+          button_style: {backgroundColor: "", fontSize: "20px", fontWeight: "bold"},
+          curr_quote: "",
+          curr_author: "",
+          boxStyle: {borderRadius: "20px", fontWeight: "bold", boxShadow: "-1px -1px 12px 1px white, 1px 1px 12px 1px white, inset 1px -1px 12px 1px white, inset 1px 1px 12px 1px white"},
+          quotes: ["Your eyes can deceive you; don’t trust them.",
+                    "In my experience, there’s no such thing as luck.",
+                    "Try not. Do—or do not. There is no try.",
+                    "Never tell me the odds.",
+                    "Once you start down the dark path, forever will it dominate your destiny.",
+                    "There’s always a bigger fish.",
+                    "Fear leads to anger, anger leads to hate, hate leads to suffering.",
+                    "I find your lack of faith disturbing.",
+                    "Let go of your hate.",
+                    "Your focus determines your reality.",
+                    "Who’s the more foolish; the fool, or the fool who follows him?",
+                    "So this is how liberty dies… with thunderous applause.",
+                    "Great, kid. Don’t get cocky.",
+                    "In a dark place we find ourselves, and a little more knowledge lights our way.",
+                    "The ability to speak does not make you intelligent.",
+                    "The fear of loss is a path to the dark side.",
+                    "Luke, you’re going to find that many of the truths we cling to depend greatly on our own point of view.The truth is often what we make of it; you heard what you wanted to hear, believed what you wanted to believe.",
+                    "Be mindful of your thoughts, Anakin, they betray you.",
+                    "Only a Sith deals in absolutes.",
+                    "I have the high ground.",
+                    "If you define yourself by the power to take life, the desire to dominate, to possess…then you have nothing.",
+                    "Hello there!",
+                    "You were my brother, Anakin! I loved you!",
+                    "You can kill me, but you will never destroy me. It takes strength to resist the dark side. Only the weak embrace it.",
+                    "A Jedi uses the Force for knowledge and defense, never for attack.",
+                    "Execute Order Sixty-Six!",
+                    "Power! Unlimited Power!",
+                   "General Kenobi",
+                   "Roger, roger",
+                   "He's too dangerous to be left alive!"
+                   ],
+          authors: ["Obi-Wan Kenobi",
+                   "Obi-Wan Kenobi",
+                   "Yoda",
+                  "Han Solo",
+                  "Yoda",
+                   "Qui-Gon Jinn",
+                   "Yoda",
+                   "Darth Vader",
+                   "Luke Skywalker",
+                   "Qui-Gon Jinn",
+                   "Obi-Wan Kenobi",
+                   "Queen Amidala",
+                   "Han Solo",
+                   "Yoda",
+                   "Qui-Gon Jinn",
+                   "Yoda",
+                   "Obi-Wan Kenobi",
+                   "Obi-Wan Kenobi",
+                   "Obi-Wan Kenobi",
+                   "Obi-Wan Kenobi",
+                   "Obi-Wan Kenobi",
+                   "Obi-Wan Kenobi",
+                   "Obi-Wan Kenobi",
+                   "Obi-Wan Kenobi",
+                   "Yoda",
+                   "Darth Sidious",
+                   "Darth Sidious",
+                    "General Grievous",
+                    "B1 droids",
+                    "Mace Windu"
+                  ],
+        }
+      }
+      componentDidMount() {
+        this.setState({
+          curr_quote: this.state.quotes[21],
+          curr_author: this.state.authors[21]
+        })
+      }
+      newQuote(event) {
+        const allColors = ["red", "green", "blue", "purple"];
+        let color = allColors[Math.floor(Math.random() * parseInt(allColors.length))];
+
+        let index = Math.floor(Math.random() * parseInt(this.state.quotes.length));
+
+        let shadow = "-1px -1px 12px 1px "+ color +", 1px 1px 12px 1px "+ color +", inset 1px -1px 12px 1px "+ color +", inset 1px 1px 12px 1px " + color;
+
+        this.setState({
+          changingColor: color,
+          curr_quote: this.state.quotes[index],
+          curr_author: this.state.authors[index],
+          boxStyle: {borderRadius: "20px", boxShadow: shadow},
+          button_style: {backgroundColor: color, fontSize: "20px", fontWeight: "bold", color: "white"}
+        })
+      }
+      render() {
+        let link = 'https://twitter.com/intent/tweet?hashtags=starwarsquotes&related=freecodecamp&text=' + '"' + this.state.curr_quote + '"%0D%0A-' + this.state.curr_author + '%0D%0A ';
+        let shadow = {}
+
+        return (
+        <div id="wrapper">
+          <div id="quote-box" class="text-center">
+            <div id="texts" style={this.state.boxStyle}>
+              <div id="text"><strong>{this.state.curr_quote}</strong></div>
+              <div id="author">:-{this.state.curr_author}-:</div>
+            </div>
+            <div id="btn_links">
+              <button id="new-quote" style={this.state.button_style} onClick={this.newQuote.bind(this)}><i class="fab fa-jedi-order"></i> New quote <i class="fab fa-sith"></i>
+              </button>
+              <div id="tweet-div">
+              <a class="button" style={{fontSize:"30px", borderRadius: "5px"}} href={link} id="tweet-quote" target="_blank">
+                <i style={{fontSize:"40px", color:this.state.changingColor}} class="fab fa-twitter-square"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        );
+      }
+    }
+    ReactDOM.render(<App/>, document.getElementById("main"));
+
+    </script>
+    <style type="text/css">
+      body {
+        background-image: url("https://img.wallpapersafari.com/desktop/1280/1024/58/28/PJvmiE.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      header {
+        position: fixed;
+        width: 100%;
+        top:0;
+        left:0;
+      }
+      header img{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+      }
+      #main {
+        margin-top: 121px;
+      }
+      #wrapper {
+        height: 80vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+      }
+      #quote-box {
+        margin-top: 60px;
+      }
+      #texts {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 400px;
+        margin: 20px;
+
+      }
+      #text {
+        font-family: Georgia;
+        font-size: 40px;
+        margin: 0 13px;
+        color: white;
+      }
+      #author {
+        margin: 10px;
+        font-family: "Calibri";
+        font-size: 25px;
+        font-weight: bold;
+        color: yellow;
+      }
+      button {
+        border-radius: 50px;
+      }
+      #tweet-div {
+        margin: 20px;
+      }
+      footer {
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 20px;
+        color: yellow;
+        font-size: 20px;
+      }
+      footer a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      @media (max-width:880px) {
+        #text {
+          font-size: 25px;
+        }
+      }
+      @media (max-width:450px) {
+        #wrapper {
+          height: auto;
+        }
+        #text {
+          margin:0 5px;
+          font-size: 18px;
+        }
+        #texts {
+          margin: 0;
+        }
+      }
+    </style>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+  </head>
+  <body>
+    <div class ="container-fluid">
+      <header>
+        <img src="https://www.freepnglogos.com/uploads/star-wars-logo-0.png" width="200" alt="star wars logo" />
+      </header>
+      <div id="main">
+      </div>
+      <footer>
+        ..by <a href="https://www.freecodecamp.org/_ashok_">_ashok_</a>
+      </footer>
+    </div>
+  </body>
+</html>
